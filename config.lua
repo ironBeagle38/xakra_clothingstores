@@ -1,6 +1,6 @@
 Config = {}
 
-Config.defaultlang = 'es'
+Config.defaultlang = 'fr'
 
 Config.MenuAlign = 'top-left'   -- top-right , top-center , top-left
 
@@ -14,7 +14,7 @@ Config.ClothingStores = {
     {
         Name = 'Tienda de ropa de Blackwater',  -- Clothing store name
         Blip = { 
-            Enable = true, -- true or false (enable or disable blip)
+            Enable = false, -- true or false (enable or disable blip)
             Sprite = 'blip_shop_tailor',    -- blip sprite
         },
         NPC = { 
@@ -30,7 +30,7 @@ Config.ClothingStores = {
     {
         Name = 'Tienda de ropa de Valentine',  -- Clothing store name
         Blip = { 
-            Enable = true, -- true or false (enable or disable blip)
+            Enable = false, -- true or false (enable or disable blip)
             Sprite = 'blip_shop_tailor',    -- blip sprite
         },
         NPC = { 
@@ -78,7 +78,7 @@ Config.ClothingStores = {
     {
         Name = 'Tienda de ropa de Van Horn',  -- Clothing store name
         Blip = { 
-            Enable = true, -- true or false (enable or disable blip)
+            Enable = false, -- true or false (enable or disable blip)
             Sprite = 'blip_shop_tailor',    -- blip sprite
         },
         NPC = { 
@@ -94,7 +94,7 @@ Config.ClothingStores = {
     {
         Name = 'Tienda de ropa de Annesburg',  -- Clothing store name
         Blip = { 
-            Enable = true, -- true or false (enable or disable blip)
+            Enable = false, -- true or false (enable or disable blip)
             Sprite = 'blip_shop_tailor',    -- blip sprite
         },
         NPC = { 
@@ -110,7 +110,7 @@ Config.ClothingStores = {
     {
         Name = 'Tienda de ropa de Strawberry',  -- Clothing store name
         Blip = { 
-            Enable = true, -- true or false (enable or disable blip)
+            Enable = false, -- true or false (enable or disable blip)
             Sprite = 'blip_shop_tailor',    -- blip sprite
         },
         NPC = { 
@@ -126,7 +126,7 @@ Config.ClothingStores = {
     {
         Name = 'Tienda de ropa de Armadillo',  -- Clothing store name
         Blip = { 
-            Enable = true, -- true or false (enable or disable blip)
+            Enable = false, -- true or false (enable or disable blip)
             Sprite = 'blip_shop_tailor',    -- blip sprite
         },
         NPC = { 
@@ -142,7 +142,7 @@ Config.ClothingStores = {
     {
         Name = 'Tienda de ropa de Tumbleweed',  -- Clothing store name
         Blip = { 
-            Enable = true, -- true or false (enable or disable blip)
+            Enable = false, -- true or false (enable or disable blip)
             Sprite = 'blip_shop_tailor',    -- blip sprite
         },
         NPC = { 

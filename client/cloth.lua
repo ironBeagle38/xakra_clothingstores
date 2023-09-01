@@ -32,8 +32,57 @@ ClothingCategories = {
     Hat         = 0x9925C067,
     Dress       = 0xA2926F9B,
     Badge       = 0x3F7F3587,
-    Armor       = 0x72E6EF74,
     HairAccesories = 0x8E84A2AA,
+}
+
+Categories = {
+    Head = {
+        Hat = 0x9925C067,
+        EyeWear     = 0x5E47CA6,
+        Mask        = 0x7505EF42,
+    },
+    Torso = {
+        Shirt       = 0x2026C46D,
+        Dress       = 0xA2926F9B,
+        NeckWear    = 0x5FC29285,
+        NeckTies    = 0x7A96FACA,
+        Vest        = 0x485EE834,
+        CoatClosed  = 0x662AC34,
+        Coat        = 0xE06D30CE,
+        Poncho      = 0xAF14310B,
+        Cloak       = 0x3C1A74CD,
+        Loadouts    = 0x83887E88,
+    },
+    Hand = {
+        Glove       = 0xEABE0032,
+        Gauntlets   = 0x91CE9B20,
+        Bracelet    = 0x7BC10759,
+        Accessories = 0x79D7DF96,
+        RingRh      = 0x7A6BBD0B,
+        RingLh      = 0xF16A1D23,
+    },
+    Pants = {
+        Pant        = 0x1D4C528A,
+        Chap        = 0x3107499B,
+        Skirt       = 0xA0E3AB7F,
+        Suspender   = 0x877A2CF7,
+        Belt        = 0xA6D134C6,
+        Buckle      = 0xFAE9107F,
+        GunbeltAccs = 0xF1542D11,
+    },
+    Shoes = {
+        Boots       = 0x777EC6EF,
+        Spurs       = 0x18729F39,
+        Spats       = 0x514ADCEA,
+    },
+    Accessories = {
+        Satchels    = 0x94504D26,
+        Holster     = 0xB6B6122D,
+        Gunbelt     = 0x9B2C8B89,
+        Badge       = 0x3F7F3587,
+        Armor       = 0x72E6EF74,
+        HairAccesories = 0x8E84A2AA,
+    },
 }
 
 Clothes = {
@@ -6139,318 +6188,7 @@ Clothes = {
                 },
             },
         },
-        Suspender = {
-            [1] = {
-                [1] = {
-                    hashname = "CLOTHING_ITEM_M_RANCHER_SUSPENDERS_VAR_001",
-                    hash = 666397293,
-                },
-                [2] = {
-                    hashname = "",
-                    hash = -1244798669,
-                },
-            },
-            [2] = {
-                [1] = {
-                    hashname = "CLOTHING_ITEM_M_ROUGHRIDER_SUSPENDERS_000",
-                    hash = 532601360,
-                },
-            },
-            [3] = {
-                [1] = {
-                    hashname = "CLOTHING_ITEM_M_SEASONAL_002_SUSPENDERS_000",
-                    hash = -73797284,
-                },
-            },
-            [4] = {
-                [1] = {
-                    hashname = "CLOTHING_ITEM_M_SEASONAL_004_SUSPENDERS_VAR_001",
-                    hash = -1779547110,
-                },
-            },
-            [5] = {
-                [1] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_000_TINT_001",
-                    hash = -107368224,
-                },
-                [2] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_000_TINT_002",
-                    hash = 237230580,
-                },
-                [3] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_000_TINT_003",
-                    hash = 439808538,
-                },
-                [4] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_000_TINT_004",
-                    hash = 1418913489,
-                },
-                [5] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_000_TINT_005",
-                    hash = 616793907,
-                },
-                [6] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_000_TINT_006",
-                    hash = 2025991983,
-                },
-                [7] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_000_TINT_007",
-                    hash = 1112457801,
-                },
-                [8] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_000_TINT_008",
-                    hash = -1709837866,
-                },
-                [9] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_000_TINT_009",
-                    hash = 1808602437,
-                },
-                [10] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_000_TINT_010",
-                    hash = 550331407,
-                },
-            },
-            [6] = {
-                [1] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_001_TINT_001",
-                    hash = -290913587,
-                },
-                [2] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_001_TINT_002",
-                    hash = 543155770,
-                },
-                [3] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_001_TINT_003",
-                    hash = -665528795,
-                },
-                [4] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_001_TINT_004",
-                    hash = 1931611049,
-                },
-                [5] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_001_TINT_005",
-                    hash = -1147986782,
-                },
-                [6] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_001_TINT_006",
-                    hash = -422284508,
-                },
-                [7] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_001_TINT_007",
-                    hash = -199651934,
-                },
-                [8] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_001_TINT_008",
-                    hash = 515433184,
-                },
-                [9] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_001_TINT_009",
-                    hash = 1744762219,
-                },
-                [10] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_001_TINT_010",
-                    hash = 2118918877,
-                },
-            },
-            [7] = {
-                [1] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_002_TINT_001",
-                    hash = 1661687986,
-                },
-                [2] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_002_TINT_002",
-                    hash = -1591159596,
-                },
-                [3] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_002_TINT_003",
-                    hash = -1360826295,
-                },
-                [4] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_002_TINT_004",
-                    hash = -2052710961,
-                },
-                [5] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_002_TINT_005",
-                    hash = -1822967502,
-                },
-                [6] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_002_TINT_006",
-                    hash = 138453790,
-                },
-                [7] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_002_TINT_007",
-                    hash = -562147430,
-                },
-                [8] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_002_TINT_008",
-                    hash = -340006379,
-                },
-                [9] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_002_TINT_009",
-                    hash = -771443033,
-                },
-                [10] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_002_TINT_010",
-                    hash = 1368078034,
-                },
-            },
-            [8] = {
-                [1] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_003_TINT_001",
-                    hash = -1215553305,
-                },
-                [2] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_003_TINT_002",
-                    hash = 963880104,
-                },
-                [3] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_003_TINT_003",
-                    hash = 733579572,
-                },
-                [4] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_003_TINT_004",
-                    hash = 501280131,
-                },
-                [5] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_003_TINT_005",
-                    hash = 312334077,
-                },
-                [6] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_003_TINT_006",
-                    hash = 1004415365,
-                },
-                [7] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_003_TINT_007",
-                    hash = 814813931,
-                },
-                [8] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_003_TINT_008",
-                    hash = 575764076,
-                },
-                [9] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_003_TINT_009",
-                    hash = 352017344,
-                },
-                [10] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_003_TINT_010",
-                    hash = 1117500888,
-                },
-            },
-            [9] = {
-                [1] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_004_TINT_001",
-                    hash = -615073663,
-                },
-                [2] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_004_TINT_002",
-                    hash = 85756940,
-                },
-                [3] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_004_TINT_003",
-                    hash = -151851079,
-                },
-                [4] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_004_TINT_004",
-                    hash = -1865079937,
-                },
-                [5] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_004_TINT_005",
-                    hash = -2105637166,
-                },
-                [6] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_004_TINT_006",
-                    hash = -869066182,
-                },
-                [7] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_004_TINT_007",
-                    hash = -1112703697,
-                },
-                [8] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_004_TINT_008",
-                    hash = -1298045173,
-                },
-                [9] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_004_TINT_009",
-                    hash = -1084030834,
-                },
-                [10] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_004_TINT_010",
-                    hash = 481473416,
-                },
-            },
-            [10] = {
-                [1] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_200_TINT_001",
-                    hash = 775236878,
-                },
-                [2] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_200_TINT_002",
-                    hash = 940196024,
-                },
-                [3] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_200_TINT_003",
-                    hash = 1421441558,
-                },
-                [4] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_200_TINT_004",
-                    hash = 1725505109,
-                },
-                [5] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_200_TINT_005",
-                    hash = 2001387320,
-                },
-                [6] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_200_TINT_006",
-                    hash = -2129276210,
-                },
-                [7] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_200_TINT_007",
-                    hash = -1849658333,
-                },
-                [8] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_200_TINT_008",
-                    hash = -1413961697,
-                },
-                [9] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_200_TINT_009",
-                    hash = -1675622174,
-                },
-                [10] = {
-                    hashname = "CLOTHING_ITEM_M_SUSPENDERS_200_TINT_010",
-                    hash = -1797457020,
-                },
-                [11] = {
-                    hashname = "",
-                    hash = -1538695362,
-                },
-            },
-            [11] = {
-                [1] = {
-                    hashname = "",
-                    hash = 246280085,
-                },
-                [2] = {
-                    hashname = "",
-                    hash = -1401181450,
-                },
-                [3] = {
-                    hashname = "",
-                    hash = -1149089533,
-                },
-                [4] = {
-                    hashname = "",
-                    hash = -711000708,
-                },
-                [5] = {
-                    hashname = "",
-                    hash = -684261272,
-                },
-                [6] = {
-                    hashname = "",
-                    hash = -366336370,
-                },
-            },
-        },
+        
         Coat = {
             [1] = {
                 [1] = {

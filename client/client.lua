@@ -360,9 +360,79 @@ function StoreMenu()
             end
 
             if data.current.value == 'Clothes' then
-				ClothesMenu(data.current.value, data.current.id)
+				CategoryMenu(data.current.value, data.current.id)
             end
 
+        end, function(data,menu)
+        end
+    )
+end
+
+
+function CategoryMenu(index, id)
+    VORPMenu.CloseAll()
+
+    data_store.Label = ' - ~t6~'..data_store.Price..'$'
+
+    local Elements = {}
+
+    for i, v in pairs(Categories) do
+		Elements[#Elements + 1] = {
+			label = _U(i),
+			value = i,
+		}
+	end
+    
+    Elements[#Elements + 1] = {
+        label = _U('Buy'),
+        value = 'Buy',
+    }
+
+    VORPMenu.Open('default', GetCurrentResourceName(), 'vorp_menu',
+        {           
+            title = data_store.Name,
+            subtext = _U('SubText'),
+            align = Config.MenuAlign, 
+            elements = Elements,
+            lastmenu = 'StoreMenu',
+        },
+        function(data, menu)
+            if data.current == 'backup' then
+                _G[data.trigger]()
+				StoreMenu()
+            end
+
+            if data.current.value == 'Buy' then
+                local Input = {
+                    type = 'enableinput',
+                    inputType = 'input',
+                    button = _U('Confirm'),
+                    placeholder = _U('PaceHolder'),
+                    style = 'block',
+                    attributes = {
+                        inputHeader = _U('Header'),
+                        type = 'text',
+                        pattern = '[A-Za-z]{2,20}',
+                        title = data_store.Name,
+                        style = 'border-radius: 10px; background-color: ; border:none;'
+                    }
+                }
+                TriggerEvent('vorpinputs:advancedInput', json.encode(Input), function(result)
+                    local Name = tostring(result)
+                    TriggerServerEvent('xakra_clothingstores:BuyClothes', data_store.Price, data_store.BuyComps, Name)
+                end)	
+            end
+
+            if data.current.value == 'DeleteOutfit' then
+                TriggerServerEvent('xakra_clothingstores:DeleteOutfit', id)
+                Character.Outfits[index] = nil
+                SetOutfit(Character.Comps)
+                OutfitsClothingStoreMenu()
+            elseif data.current.value then
+                local category = Categories[data.current.value]
+                ClothesMenu(category)
+            end
+	
         end, function(data,menu)
         end
     )
@@ -376,32 +446,43 @@ AddEventHandler('xakra_clothingstores:CloseClothingStore', function()
     CloseClothingStore()
 end)
 
+
 --########################## CLOTHES MENU ##########################
-function ClothesMenu()
+function ClothesMenu(category)
     VORPMenu.CloseAll()
 
     data_store.Label = ' - ~t6~'..data_store.Price..'$'
 
     local Elements = {}
-
-    if IsPedMale(PlayerPedId()) then
-        for i, v in pairs(Clothes.Male) do
-            Elements[#Elements + 1] = {
-                label = _U(i),
-                Clothes = v,
-                Category = i,
-            }
-        end
-
-    else
-        for i, v in pairs(Clothes.Female) do
-            Elements[#Elements + 1] = {
-                label = _U(i),
-                Clothes = v,
-                Category = i,
-            }
+    for k, val in pairs(category) do
+        print(k)
+        print(val)
+        if IsPedMale(PlayerPedId()) then
+            for i, v in pairs(Clothes.Male) do
+                if k == i then
+                    Elements[#Elements + 1] = {
+                        label = _U(i),
+                        Clothes = v,
+                        Category = i,
+                        cat = k,
+                    }
+                end
+            end
+        else
+            for i, v in pairs(Clothes.Female) do
+                if k == i then
+                    Elements[#Elements + 1] = {
+                        label = _U(i),
+                        Clothes = v,
+                        Category = i,
+                        cat = k,
+                    }
+                end
+            end
         end
     end
+
+    
 
     Elements[#Elements + 1] = {
         label = _U('Buy'),
@@ -414,16 +495,16 @@ function ClothesMenu()
             subtext = _U('SubText'),
             align = Config.MenuAlign, 
             elements = Elements,
-            lastmenu = 'StoreMenu',
+            lastmenu = 'CategoryMenu',
         },
         function(data, menu)
             if data.current == 'backup' then
                 _G[data.trigger]()
-                SetOutfit(Character.Comps)
+                CategoryMenu(data.current.value, data.current.id)
             end
 
             if data.current.Clothes then
-				ClothMenu(data.current)
+				ClothMenu(data.current, category)
             end
 
             if data.current.value == 'Buy' then
@@ -452,9 +533,12 @@ function ClothesMenu()
     )
 end
 
-function ClothMenu(CategoryData)
+function ClothMenu(CategoryData, category)
     VORPMenu.CloseAll()
-
+    for k, val in pairs(category) do
+        print(k)
+        print(val)
+    end
     local Elements = {
         {
             label = CategoryData.label,
@@ -498,7 +582,9 @@ function ClothMenu(CategoryData)
         },
         function(data, menu)
             if data.current == 'backup' then
-                _G[data.trigger]()
+                print(category)
+
+                ClothesMenu(category)
             end
 
             if data.current.type == 'slider' and data.current.value < 1 then
@@ -835,8 +921,6 @@ function OutfitsClothingStoreMenu()
             if data.current.value then
 				OutfitSubMenu(data.current.value, data.current.id)
             end
-   
-   
         end, function(data,menu)
         end
     )
@@ -920,4 +1004,9 @@ AddEventHandler('onResourceStop', function (resourceName)
 
     VORPMenu.CloseAll()
     CloseClothingStore()
+end)
+
+RegisterNetEvent('xakra_clothingstores:ChangeCloth')
+AddEventHandler('xakra_clothingstores:ChangeCloth', function(Comps)
+    SetOutfit(Comps)
 end)
